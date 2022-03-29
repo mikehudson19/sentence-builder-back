@@ -1,7 +1,4 @@
 "use strict";
-/**
- * Required External Modules
- */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -30,41 +27,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.db = void 0;
-const dotenv = __importStar(require("dotenv"));
-const express_1 = __importDefault(require("express"));
-const cors_1 = __importDefault(require("cors"));
-const helmet_1 = __importDefault(require("helmet"));
-dotenv.config();
 const mysql2_1 = __importDefault(require("mysql2"));
+const dotenv = __importStar(require("dotenv"));
+dotenv.config();
 exports.db = mysql2_1.default.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PWD,
     database: process.env.DB_NAME
-});
-exports.db.connect((err) => {
-    if (err) {
-        throw err;
-    }
-    console.log("Connected to DB");
-});
-/**
- * App Variables
- */
-if (!process.env.PORT) {
-    process.exit(1);
-}
-const PORT = parseInt(process.env.PORT, 10);
-const app = (0, express_1.default)();
-/**
- *  App Configuration
- */
-app.use((0, helmet_1.default)());
-app.use((0, cors_1.default)());
-app.use(express_1.default.json());
-/**
- * Server Activation
- */
-app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
 });
