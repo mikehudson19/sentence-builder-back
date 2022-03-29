@@ -46,9 +46,21 @@
 /**
  *  App Configuration
  */
- app.use(helmet());
+
+
+//  app.use(helmet());
  app.use(cors());
  app.use(express.json());
+
+
+ /**
+ *  Import Routes
+ */
+import { wordTypeRouter } from '../src/app/routes/word-type-routes';
+import { wordRouter } from "./app/routes/word-routes";
+
+app.use("/wordtypes", wordTypeRouter);
+app.use("/words", wordRouter);
 
 /**
  * Server Activation
