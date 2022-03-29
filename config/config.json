@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "!insecuresqlserverpassword",
-    "database": "sentence_db",
-    "host": "localhost",
+    "password": "***",
+    "database": "***",
+    "host": "***",
     "dialect": "mysql"
   },
   "test": {
