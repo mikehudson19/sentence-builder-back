@@ -56,11 +56,13 @@
  /**
  *  Import Routes
  */
-import { wordTypeRouter } from '../src/app/routes/word-type-routes';
+import { wordTypeRouter } from './app/routes/word-type-routes';
 import { wordRouter } from "./app/routes/word-routes";
+import { sentenceRouter } from './app/routes/sentence-routes';
 
-app.use("/wordtypes", wordTypeRouter);
-app.use("/words", wordRouter);
+app.use("/api/wordtypes", wordTypeRouter);
+app.use("/api/words", wordRouter);
+app.use("/api/sentences", sentenceRouter);
 
 /**
  * Server Activation
