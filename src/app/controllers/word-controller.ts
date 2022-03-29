@@ -1,7 +1,8 @@
 import { db } from '../../../models/index';
+import { Request, Response } from 'express';
 
 export class WordController {
-    async list(req: any, res: any) {
+    async list(req: Request, res: Response) {
         
         const words = await db.Word.findAll({
             where: {
