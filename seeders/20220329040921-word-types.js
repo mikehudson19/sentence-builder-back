@@ -3,15 +3,15 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('WordTypes', [
-      { wordType: "Noun" },
-      { wordType: "Verb" },
-      { wordType: "Adjective" },
-      { wordType: "Adverb" },
-      { wordType: "Pronoun" },
-      { wordType: "Preposition" },
-      { wordType: "Conjunction" },
-      { wordType: "Determiner" },
-      { wordType: "Exclamation" },
+      { value: "Noun" },
+      { value: "Verb" },
+      { value: "Adjective" },
+      { value: "Adverb" },
+      { value: "Pronoun" },
+      { value: "Preposition" },
+      { value: "Conjunction" },
+      { value: "Determiner" },
+      { value: "Exclamation" },
       ])
   },
 

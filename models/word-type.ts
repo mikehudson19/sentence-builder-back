@@ -14,7 +14,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
     }
   };
   WordType.init({
-    wordType: DataTypes.STRING
+    value: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'WordType',

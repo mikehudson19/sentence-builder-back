@@ -7,7 +7,7 @@ export class WordController {
             where: {
                 wordTypeId: req.params.id
             },
-            attributes: ['word']
+            attributes: ['value']
         });
 
         res.send(words);

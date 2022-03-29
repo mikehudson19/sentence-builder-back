@@ -16,8 +16,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
     value: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Sentence',
-    paranoid: true
+    modelName: 'Sentence'
   });
   return Sentence;
 };
