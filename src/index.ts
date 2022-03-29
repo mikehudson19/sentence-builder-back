@@ -9,7 +9,9 @@
  
  dotenv.config();
 
-
+/**
+ * Create & connect to DB
+ */
 
  import mysql from "mysql2";
  
@@ -28,13 +30,9 @@
  })
 
 
-
-
-
 /**
  * App Variables
  */
-
 
 
  if (!process.env.PORT) {

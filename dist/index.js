@@ -35,6 +35,9 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const helmet_1 = __importDefault(require("helmet"));
 dotenv.config();
+/**
+ * Create & connect to DB
+ */
 const mysql2_1 = __importDefault(require("mysql2"));
 exports.db = mysql2_1.default.createConnection({
     host: process.env.DB_HOST,
