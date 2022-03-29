@@ -12,11 +12,10 @@ module.exports = {
       { word: "Horse", wordTypeId: 7 },
       { word: "Ice", wordTypeId: 8 },
       { word: "Rain", wordTypeId: 9 }
-      
       ])
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Words', null, {});
+    await queryInterface.bulkDelete('Words');
   }
 };

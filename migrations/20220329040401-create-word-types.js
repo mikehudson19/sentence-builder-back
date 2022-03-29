@@ -12,8 +12,7 @@ module.exports = {
       wordType: {
         type: Sequelize.STRING,
         allowNull: false,
-      },
-
+      }
     })
   },
 

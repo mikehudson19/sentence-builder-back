@@ -14,11 +14,11 @@ module.exports = (sequelize: any, DataTypes: any) => {
     }
   };
   WordType.init({
-    wordType: DataTypes.STRING,
+    wordType: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'WordType',
-    paranoid: true
+    timestamps: false
   });
   return WordType;
 };
