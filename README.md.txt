@@ -1,3 +1,12 @@
+Run the database migrations:
+
+   npx sequelize-cli db:migrate 
+
+Seed the data:
+
+   npx sequelize-cli db:seed:all
+
+
 To copy the config folder into the dist folder, run the following: 
 
    npm run copy-files
